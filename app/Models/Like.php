@@ -9,4 +9,9 @@ class Like extends Model
 {
     use HasFactory;
     
+    protected $fillable = [
+        'post_id',
+        'user_id',
+        'is_active'
+    ];
 }
