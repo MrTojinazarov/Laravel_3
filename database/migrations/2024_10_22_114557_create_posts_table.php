@@ -16,8 +16,8 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained('Categories')->onDelete('cascade');
             $table->string('title');
             $table->text('body');
-            $table->integer('likes')->default('1');
-            $table->integer('dislikes')->default('0');
+            $table->integer('likes')->default(0);
+            $table->integer('dislikes')->default(0);
             $table->timestamps();
         });
     }

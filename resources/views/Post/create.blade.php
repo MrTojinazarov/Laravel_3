@@ -16,7 +16,7 @@
                 <div class="card-header">
                     <h3 class="card-title">Add Post</h3>
                 </div>
-                <form action="/post" method="POST">
+                <form action="/post" method="post">
                     @csrf
                     <div class="card-body">
                         <div class="form-group">

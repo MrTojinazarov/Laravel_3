@@ -22,7 +22,7 @@ class LikeController extends Controller
     {
 
         $request->validate([
-            'name' => 'required'
+            'post_id' => 'required'
         ]);
 
         $Like = new Like();

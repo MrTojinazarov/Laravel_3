@@ -22,9 +22,9 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-
+        // dd($request->all());
         $request->validate([
-            'name' => 'required',
+            'category_id' => 'required',
             'title' => 'required',
             'body' => 'required'
         ]);
@@ -33,7 +33,9 @@ class PostController extends Controller
         $Post->title = $request->title;
         $Post->category_id = $request->category_id;
         $Post->body = $request->body;
-        dd($Post->body);
+        $Post->likes = 0;
+        $Post->dislikes = 0;
+        // dd($Post->body);
         $Post->save();
         return redirect('/post')->with('success', 'Post successfully added');
     }
